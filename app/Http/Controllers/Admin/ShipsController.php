@@ -84,24 +84,30 @@ class ShipsController extends Controller
         $ship->serial_no = $request->input('serial_no');
         
 
-        if( $request->hasFile('image') ){
+        // if( $request->hasFile('image') ){
             
-            //get filename with extension
-            $filenameWithExt = $request->file('image')->getClientOriginalName();
+        //     //get filename with extension
+        //     $filenameWithExt = $request->file('image')->getClientOriginalName();
             
-            //get just filename
-            $filename = pathInfo($filenameWithExt,PATHINFO_FILENAME);
+        //     //get just filename
+        //     $filename = pathInfo($filenameWithExt,PATHINFO_FILENAME);
             
-            // get just extension
-            $extension = $request->file('image')->getClientOriginalExtension();
+        //     // get just extension
+        //     $extension = $request->file('image')->getClientOriginalExtension();
             
-            $fileNameToStore = $filename.'.'.$extension;
+        //     $fileNameToStore = $filename.'.'.$extension;
             
-            //upload the image
-            $path = $request->file('image')->storeAs('/img/ships',$fileNameToStore);
-            $ship->image = $fileNameToStore;
-        }
+        //     //upload the image
+        //     $path = $request->file('image')->storeAs('/img/ships',$fileNameToStore);
+        //     $ship->image = $fileNameToStore;
+        // }
         
+        
+        $ship->image = time().'.'.request()->file('image')->getClientOriginalExtension();
+
+
+
+        request()->file('image')->move(public_path('img/ships'), $ship->image);
 
 
         $ship->save();

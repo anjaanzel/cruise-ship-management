@@ -29,37 +29,37 @@ class UsersTableSeeder extends Seeder
      	'surname'=>'User',
      	'email'=>'admin@admin.com',
      	'password'=>Hash::make('adminadmin'),
-     	'role_id'=>'26',
-          'ship_id'=>'2'
+     	'role_id'=>'1',
+          'ship_id'=>'1'
      ]);
 
-     $captain = User::create([
-     	'name'=>'Petar',
-     	'surname'=>'Petrovic',
-     	'email'=>'petar@petrovic.com',
-     	'password'=>Hash::make('password'),
-     	'role_id'=>'27',
-          'ship_id'=>'2'
-     ]);
+     // $captain = User::create([
+     // 	'name'=>'Petar',
+     // 	'surname'=>'Petrovic',
+     // 	'email'=>'petar@petrovic.com',
+     // 	'password'=>Hash::make('password'),
+     // 	'role_id'=>'27',
+     //      'ship_id'=>'2'
+     // ]);
 
 
-     $engineer = User::create([
-     	'name'=>'Marko',
-     	'surname'=>'Markovic',
-     	'email'=>'marko@markovic.com',
-     	'password'=>Hash::make('password'),
-     	'role_id'=>'28',
-          'ship_id'=>'2'
-     ]);
+     // $engineer = User::create([
+     // 	'name'=>'Marko',
+     // 	'surname'=>'Markovic',
+     // 	'email'=>'marko@markovic.com',
+     // 	'password'=>Hash::make('password'),
+     // 	'role_id'=>'28',
+     //      'ship_id'=>'2'
+     // ]);
 
-     $crew = User::create([
-     	'name'=>'Nadica',
-     	'surname'=>'Vidic',
-     	'email'=>'nadica@vidic.com',
-     	'password'=>Hash::make('password'),
-     	'role_id'=>'28',
-          'ship_id'=>'2'
-     ]);
+     // $crew = User::create([
+     // 	'name'=>'Nadica',
+     // 	'surname'=>'Vidic',
+     // 	'email'=>'nadica@vidic.com',
+     // 	'password'=>Hash::make('password'),
+     // 	'role_id'=>'28',
+     //      'ship_id'=>'2'
+     // ]);
 
 
     }
